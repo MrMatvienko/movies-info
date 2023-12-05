@@ -42,7 +42,7 @@ export const MovieDetails = () => {
                 ? `https://image.tmdb.org/t/p/original${movie.poster_path}`
                 : ''
             }
-            alt="get"
+            alt="poster"
             width={200}
             height={300}
           />
