@@ -14,6 +14,11 @@ export const Item = styled.li`
   max-width: 200px;
   align-items: center;
   border: 1px solid #000;
+  transition: transform 0.1s ease;
+  & :hover,
+  :focus {
+    transform: scale(1.1);
+  }
 `;
 
 export const OriginTitle = styled.p`
