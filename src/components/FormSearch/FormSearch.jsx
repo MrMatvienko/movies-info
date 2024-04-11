@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Form, Input } from './FormSearch.styled';
+import { Button, Form, Input } from './FormSearch.styled';
 
 export const FormSearch = ({ setSearchParams }) => {
   const [query, setQuery] = useState('');
@@ -23,9 +23,9 @@ export const FormSearch = ({ setSearchParams }) => {
         value={query}
         onChange={handleSearchParams}
       />
-      <button type="submit" disabled={!query}>
+      <Button type="submit" disabled={!query}>
         Search
-      </button>
+      </Button>
     </Form>
   );
 };

@@ -13,20 +13,23 @@ export const List = styled.ul`
 export const Item = styled.li`
   max-width: 200px;
   align-items: center;
-  border: 1px solid #000;
-  transition: transform 0.1s ease;
-  & :hover,
-  :focus {
-    transform: scale(1.1);
+
+  background-color: #000;
+  transition: transform 0.5s ease;
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
   }
+  border-radius: 20px;
 `;
 
 export const OriginTitle = styled.p`
-  margin: auto;
-  height: 65px;
-  font-size: 18px;
+  font-family: inherit;
+  height: 40px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
+  color: white;
 `;
 
 export const ImgContainer = styled.div`

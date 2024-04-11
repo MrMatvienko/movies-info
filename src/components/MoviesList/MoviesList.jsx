@@ -16,6 +16,7 @@ export const MoviesList = ({ movies }) => {
                     alt="poster"
                     width={200}
                     height={290}
+                    style={{ borderRadius: '20px' }}
                   />
                 </ImgContainer>
               )}
