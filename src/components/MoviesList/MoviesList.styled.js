@@ -31,7 +31,3 @@ export const OriginTitle = styled.p`
   text-align: center;
   color: white;
 `;
-
-export const ImgContainer = styled.div`
-  border-bottom: 1px solid #3333;
-`;

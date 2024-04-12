@@ -7,18 +7,18 @@ export const WraperDetails = styled.div`
   background: url(${img}) 50% 0 no-repeat #000;
 `;
 
-export const GoBack = styled.button`
-  border-radius: 10px;
-  border: none;
-  width: 80px;
-  height: 20px;
-  color: white;
-  background-color: #000;
-  cursor: pointer;
-`;
+// export const GoBack = styled.button`
+//   border-radius: 10px;
+//   border: none;
+//   width: 80px;
+//   height: 20px;
+//   color: white;
+//   background-color: #000;
+//   cursor: pointer;
+// `;
 
 export const PosterContainer = styled.div`
-  max-width: 1200px;
+  width: 100%;
   margin-top: 20px;
   display: flex;
   gap: 20px;
@@ -33,8 +33,12 @@ export const List = styled.ul`
 `;
 
 export const InfoBlock = styled.div`
-  background: rgba(225, 225, 225, 0.4);
+  background: rgba(225, 225, 225, 0.8);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+export const AdditionalBlock = styled.div`
+  background: rgba(225, 225, 225, 0.8);
+  padding: 20px;
+  border-radius: 10px;
 `;

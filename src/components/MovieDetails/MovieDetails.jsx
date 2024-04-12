@@ -1,20 +1,34 @@
 import { getMovieById } from 'API/API';
 import { Suspense, useEffect, useState } from 'react';
+import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import {
-  Link,
-  NavLink,
-  Outlet,
-  useLocation,
-  useParams,
-} from 'react-router-dom';
-import {
-  GoBack,
+  AdditionalBlock,
   InfoBlock,
   List,
   PosterContainer,
   TitleInfo,
   WraperDetails,
 } from './MovieDetails.styled';
+import { styled } from 'styled-components';
+
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  color: #333;
+  padding: 4px 16px;
+  border-radius: 10px;
+  background-color: #899599;
+  font-weight: bold;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #49c2ee;
+    color: white;
+  }
+  &.active {
+    background-color: #98d3ec;
+    color: white;
+  }
+`;
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
@@ -33,14 +47,13 @@ export const MovieDetails = () => {
   }, [movieId]);
   return (
     <WraperDetails>
-      <GoBack>
-        <Link
-          style={{ color: 'white', textDecoration: 'none' }}
-          to={backLinkHref}
-        >
-          Go back
-        </Link>
-      </GoBack>
+      <StyledNavLink
+        style={{ color: 'white', textDecoration: 'none' }}
+        to={backLinkHref}
+      >
+        Go back
+      </StyledNavLink>
+
       <PosterContainer>
         <img
           src={
@@ -66,24 +79,24 @@ export const MovieDetails = () => {
           </ul>
         </InfoBlock>
       </PosterContainer>
-      <div>
+      <AdditionalBlock>
         <TitleInfo>Additional information</TitleInfo>
         <List>
           <li>
-            <NavLink to="cast" state={location.state}>
+            <StyledNavLink to="cast" state={location.state}>
               Cast
-            </NavLink>
+            </StyledNavLink>
           </li>
           <li>
-            <NavLink to="reviews" state={location.state}>
+            <StyledNavLink to="reviews" state={location.state}>
               Reviews
-            </NavLink>
+            </StyledNavLink>
           </li>
         </List>
         <Suspense fallback={<div>Loading subpage...</div>}>
           <Outlet />
         </Suspense>
-      </div>
+      </AdditionalBlock>
     </WraperDetails>
   );
 };
