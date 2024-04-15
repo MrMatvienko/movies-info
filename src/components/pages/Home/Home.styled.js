@@ -11,4 +11,5 @@ export const HomeWraper = styled.div`
 `;
 export const Title = styled.h1`
   color: white;
+  text-shadow: rgb(225, 225, 225) 1px 0px 20px;
 `;
