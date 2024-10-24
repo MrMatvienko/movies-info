@@ -8,20 +8,18 @@ export const NavHeader = styled.nav`
   margin: 0 auto;
   background-color: black;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  @media (max-width: 759px) {
+    justify-content: center;
+  }
 `;
 
 export const HeaderList = styled.ul`
   padding-left: 100px;
-
   display: flex;
   justify-content: center;
   gap: 20px;
   text-align: center;
+  @media (max-width: 759px) {
+    padding-left: unset;
+  }
 `;
-
-// export const HeaderItem = styled.li`
-//   width: 60px;
-//   height: 25px;
-//   background-color: #a41414;
-//   border-radius: 10px;
-// `;

@@ -20,6 +20,9 @@ export const Item = styled.li`
     transform: scale(1.2);
   }
   border-radius: 20px;
+  @media (max-width: 759px) {
+    width: 160px;
+  }
 `;
 
 export const OriginTitle = styled.p`
@@ -29,4 +32,16 @@ export const OriginTitle = styled.p`
   font-weight: bold;
   text-align: center;
   color: white;
+  @media (max-width: 759px) {
+    font-size: 16px;
+  }
+`;
+export const Image = styled.img`
+  width: 200px;
+  height: 290px;
+  border-radius: 20px;
+  @media (max-width: 759px) {
+    width: 160px;
+    height: 240px;
+  }
 `;

@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Item, List, OriginTitle } from './MoviesList.styled';
+import { Item, List, OriginTitle, Image } from './MoviesList.styled';
 import { DefaultMovie } from 'components/DefaultMovie/DefaultMovie';
 
 export const MoviesList = ({ movies }) => {
@@ -11,12 +11,9 @@ export const MoviesList = ({ movies }) => {
           <Item key={id}>
             <Link state={{ from: location }} to={`/movies/${id}`}>
               {poster_path ? (
-                <img
+                <Image
                   src={`https://image.tmdb.org/t/p/original${poster_path}`}
                   alt="poster"
-                  width={200}
-                  height={290}
-                  style={{ borderRadius: '20px' }}
                 />
               ) : (
                 <DefaultMovie />

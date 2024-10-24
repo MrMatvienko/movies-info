@@ -30,8 +30,6 @@ export const Cast = () => {
                 <ImgCast
                   src={`https://image.tmdb.org/t/p/original${profile_path}`}
                   alt={original_name}
-                  width={115}
-                  height={160}
                 />
               ) : (
                 <DefaultImage />
