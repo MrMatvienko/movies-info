@@ -2,7 +2,6 @@ import { styled } from 'styled-components';
 
 export const List = styled.ul`
   margin: auto;
-  margin-left: 30px;
   display: flex;
   justify-content: center;
   align-items: center;

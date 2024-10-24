@@ -10,6 +10,7 @@ export const HomeWraper = styled.div`
     url(${img}) 50% 0 no-repeat #000;
 `;
 export const Title = styled.h1`
+  text-align: center;
   color: white;
   text-shadow: rgb(225, 225, 225) 1px 0px 20px;
 `;
